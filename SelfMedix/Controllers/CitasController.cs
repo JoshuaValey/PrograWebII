@@ -154,7 +154,7 @@ namespace SelfMedix.Controllers
                     var citaJson = JsonConvert.SerializeObject(cita);
                     var content = new StringContent(citaJson, Encoding.UTF8, "application/json");
 
-                    var response = await _httpClient.PutAsync($"{URL}/{Id}", content);
+                    var response = await _httpClient.PutAsync($"{URL}/{id}", content);
                     if (response.IsSuccessStatusCode)
                     {
                         return RedirectToAction(nameof(Index));
@@ -176,42 +176,36 @@ namespace SelfMedix.Controllers
 
 
 
-            #region coment
-            //if (id != cita.Id)
-            //{
-            //    return NotFound();
-            //}
-
-            //if (ModelState.IsValid)
-            //{
-            //    try
-            //    {
-            //        _context.Update(cita);
-            //        await _context.SaveChangesAsync();
-            //    }
-            //    catch (DbUpdateConcurrencyException)
-            //    {
-            //        if (!CitaExists(cita.Id))
-            //        {
-            //            return NotFound();
-            //        }
-            //        else
-            //        {
-            //            throw;
-            //        }
-            //    }
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //ViewData["IdMedico"] = new SelectList(_context.Medicos, "Id", "Id", cita.IdMedico);
-            //ViewData["IdPaciente"] = new SelectList(_context.Pacientes, "Id", "Id", cita.IdPaciente);
-            //return View(cita);
-
-            #endregion
+           
         }
 
         // GET: Citas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var response = await _httpClient.GetAsync($"{URL}/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                var citaJson = await response.Content.ReadAsStringAsync();
+                var cita1 = JsonConvert.DeserializeObject<Cita>(citaJson);
+
+                if (cita1 == null)
+                {
+                    return NotFound();
+                }
+
+                return View(cita1);
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            #region Coment
             if (id == null || _context.Cita == null)
             {
                 return NotFound();
@@ -227,6 +221,8 @@ namespace SelfMedix.Controllers
             }
 
             return View(cita);
+
+            #endregion
         }
 
         // POST: Citas/Delete/5
@@ -234,6 +230,18 @@ namespace SelfMedix.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+
+            var response = await _httpClient.DeleteAsync($"{URL}/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return View();
+            }
+
+            #region coment
             if (_context.Cita == null)
             {
                 return Problem("Entity set 'SelfmedixContext.Cita'  is null.");
@@ -246,6 +254,7 @@ namespace SelfMedix.Controllers
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+            #endregion 
         }
 
         private bool CitaExists(int id)
