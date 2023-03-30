@@ -12,7 +12,7 @@ public partial class Historialmedico
 
     public int IdPaciente { get; set; }
 
-    public string Enfermedad { get; set; } = null!;
+    public string? Enfermedad { get; set; }
 
     public string? Tratamiento { get; set; }
 

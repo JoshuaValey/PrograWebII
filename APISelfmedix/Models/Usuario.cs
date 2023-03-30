@@ -21,9 +21,9 @@ public partial class Usuario
 
     public string? UrlImg { get; set; }
 
-    public string Correo { get; set; } = null!;
+    public string Correo { get; set; } 
 
-    public string Contrasenia { get; set; } = null!;
+    public string Contrasenia { get; set; } 
 
     public virtual ICollection<Medico> Medicos { get; } = new List<Medico>();
 
