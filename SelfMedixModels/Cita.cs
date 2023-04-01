@@ -19,7 +19,7 @@ public partial class Cita
 
     public string? Descripcion { get; set; }
 
-    public virtual Medico IdMedicoNavigation { get; set; } = null!;
+    public virtual Medico? IdMedicoNavigation { get; set; } 
 
-    public virtual Paciente IdPacienteNavigation { get; set; } = null!;
+    public virtual Paciente? IdPacienteNavigation { get; set; }
 }

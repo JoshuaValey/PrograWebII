@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using SelfMedixModels;
 
 namespace SelfMedix.Models;
 
@@ -215,4 +216,6 @@ public partial class SelfmedixContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<SelfMedixModels.Usuario> Usuario { get; set; } = default!;
 }

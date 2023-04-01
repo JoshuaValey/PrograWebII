@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using SelfMedix.Models;
 
+
 namespace SelfMedix.Controllers
 {
     public class CitasController : Controller
@@ -104,15 +105,7 @@ namespace SelfMedix.Controllers
             return View(cita);
 
 
-            //if (ModelState.IsValid)
-            //{
-            //    _context.Add(cita);
-            //    await _context.SaveChangesAsync();
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //ViewData["IdMedico"] = new SelectList(_context.Medicos, "Id", "Id", cita.IdMedico);
-            //ViewData["IdPaciente"] = new SelectList(_context.Pacientes, "Id", "Id", cita.IdPaciente);
-            //return View(cita);
+           
         }
 
 

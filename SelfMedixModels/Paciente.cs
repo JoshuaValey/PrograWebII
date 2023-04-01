@@ -13,5 +13,6 @@ public partial class Paciente
 
     public virtual ICollection<Historialmedico> Historialmedicos { get; } = new List<Historialmedico>();
 
-    public virtual Usuario IdUsuarioPacienteNavigation { get; set; } = null!;
+    public virtual Usuario? IdUsuarioPacienteNavigation { get; set; }
+
 }
