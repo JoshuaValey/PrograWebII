@@ -299,3 +299,4 @@ C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\Se
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\SelfMedix\bin\Debug\net7.0\APISelfmedix.dll
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\SelfMedix\bin\Debug\net7.0\APISelfmedix.pdb
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\SelfMedix\obj\Debug\net7.0\SelfMedix.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\SelfMedix\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -289,3 +289,4 @@ C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\AP
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\APISelfmedix\bin\Debug\net7.0\APISelfmedix.staticwebassets.runtime.json
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\APISelfmedix\bin\Debug\net7.0\SelfMedixModels.dll
 C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\APISelfmedix\bin\Debug\net7.0\SelfMedixModels.pdb
+C:\Users\jorge\Escritorio\URL\Primer Ciclo 2023\Progra Web\Proyecto\SelfMedix\APISelfmedix\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

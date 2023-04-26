@@ -12,11 +12,11 @@ public partial class Historialmedico
 
     public int IdPaciente { get; set; }
 
-    public string Enfermedad { get; set; } = null!;
+    public string? Enfermedad { get; set; } 
 
     public string? Tratamiento { get; set; }
 
-    public string Fechaingreso { get; set; } = null!;
+    public DateTime? Fechaingreso { get; set; } 
 
     public virtual Paciente IdPacienteNavigation { get; set; } = null!;
 }

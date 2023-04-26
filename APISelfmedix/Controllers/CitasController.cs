@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,10 +24,10 @@ namespace APISelfmedix.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cita>>> GetCita()
         {
-          if (_context.Cita == null)
-          {
-              return NotFound();
-          }
+            if (_context.Cita == null)
+            {
+                return NotFound();
+            }
             return await _context.Cita.ToListAsync();
         }
 
@@ -35,10 +35,10 @@ namespace APISelfmedix.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Cita>> GetCita(int id)
         {
-          if (_context.Cita == null)
-          {
-              return NotFound();
-          }
+            if (_context.Cita == null)
+            {
+                return NotFound();
+            }
             var cita = await _context.Cita.FindAsync(id);
 
             if (cita == null)
@@ -65,7 +65,7 @@ namespace APISelfmedix.Controllers
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)    
+            catch (DbUpdateConcurrencyException)
             {
                 if (!CitaExists(id))
                 {
@@ -85,10 +85,10 @@ namespace APISelfmedix.Controllers
         [HttpPost]
         public async Task<ActionResult<Cita>> PostCita(Cita cita)
         {
-          if (_context.Cita == null)
-          {
-              return Problem("Entity set 'SelfmedixContext.Cita'  is null.");
-          }
+            if (_context.Cita == null)
+            {
+                return Problem("Entity set 'SelfmedixContext.Cita'  is null.");
+            }
             _context.Cita.Add(cita);
             await _context.SaveChangesAsync();
 

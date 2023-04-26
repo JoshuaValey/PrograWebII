@@ -16,7 +16,7 @@ public partial class Historialmedico
 
     public string? Tratamiento { get; set; }
 
-    public string? Fechaingreso { get; set; } 
+    public DateTime? Fechaingreso { get; set; } 
 
     public virtual Paciente? IdPacienteNavigation { get; set; } 
 }
