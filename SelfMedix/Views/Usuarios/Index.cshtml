@@ -21,24 +21,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.FechaNacimiento)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaCreacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaElimina)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vigente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UrlImg)
-            </th>
+
+
+
+           
             <th>
                 @Html.DisplayNameFor(model => model.Correo)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contrasenia)
-            </th>
+           
             <th></th>
         </tr>
     </thead>
@@ -54,24 +44,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FechaNacimiento)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaCreacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaElimina)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vigente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UrlImg)
-            </td>
+ 
+
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Correo)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contrasenia)
-            </td>
+            
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

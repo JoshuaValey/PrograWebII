@@ -22,4 +22,6 @@ public partial class Cita
     public virtual Medico? IdMedicoNavigation { get; set; }
 
     public virtual Paciente? IdPacienteNavigation { get; set; }
+
+   
 }

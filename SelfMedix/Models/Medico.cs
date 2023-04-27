@@ -9,11 +9,17 @@ public partial class Medico
 
     public int IdUsuarioMedico { get; set; }
 
-    public string TituloCorto { get; set; } = null!;
+    public string? TituloCorto { get; set; }
 
     public virtual ICollection<Cita> Cita { get; } = new List<Cita>();
 
-    public virtual Usuario IdUsuarioMedicoNavigation { get; set; } = null!;
+    public virtual Usuario? IdUsuarioMedicoNavigation { get; set; }
 
     public virtual ICollection<Entidadmedica> IdEntidads { get; } = new List<Entidadmedica>();
+
+    //public string? NombreMedico() => IdUsuarioMedicoNavigation.ToString();
+
+   // public string? NombreMedico { get => (IdUsuarioMedicoNavigation.Nombres + " " + IdUsuarioMedicoNavigation.Apellidos); }
+    
+
 }

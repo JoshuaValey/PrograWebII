@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using static Mysqlx.Crud.Order.Types;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SelfMedix.Models;
 
@@ -28,4 +30,10 @@ public partial class Usuario
     public virtual ICollection<Medico> Medicos { get; } = new List<Medico>();
 
     public virtual ICollection<Paciente> Pacientes { get; } = new List<Paciente>();
+
+
+    public override string ToString()
+    {
+        return string.Format("{0} {1}", Nombres, Apellidos);
+    }
 }

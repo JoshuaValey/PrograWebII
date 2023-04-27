@@ -29,6 +29,7 @@ namespace APISelfmedix.Controllers
                 return NotFound();
             }
             return await _context.Cita.ToListAsync();
+            //return await _context.Cita.Include(e => e.IdMedicoNavigation).Include.(e => e.IdMedicoNavigation)ToListAsync();
         }
 
         // GET: api/Citas/5

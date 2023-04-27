@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfMedixModels", "SelfMedi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfMedix", "SelfMedix\SelfMedix.csproj", "{504A9196-F229-4D89-B399-0DF03A46B264}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{92D2C5BF-B7FC-44B6-9DC2-49E66A7922E5}"
+	ProjectSection(SolutionItems) = preProject
+		ScriptBase.sql = ScriptBase.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -75,7 +75,7 @@ namespace SelfMedix.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombres,Apellidos,FechaNacimiento,FechaCreacion,FechaElimina,Vigente,UrlImg,Correo,Contrasenia")] Usuario usuario)
+        public async Task<IActionResult> Create( Usuario usuario)
         {
             // Convertir la cita en un objeto JSON
             var usuarioJson = JsonConvert.SerializeObject(usuario);
